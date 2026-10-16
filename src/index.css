@@ -6,8 +6,7 @@
   html { scroll-behavior: smooth; }
   body { font-family: "Inter", sans-serif; color: #2c2c2c; background: hsl(0 0% 100%); }
   h1, h2, h3, h4, h5, h6 { font-family: "Montserrat", sans-serif; }
-  a { color: hsl(192 100% 50%); }
-  a:hover { color: hsl(181 100% 40%); }
+  
 }
 
 @layer components {
