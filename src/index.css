@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { font-family: "Inter", sans-serif; color: #2c2c2c; background: hsl(0 0% 100%); }
+  h1, h2, h3, h4, h5, h6 { font-family: "Montserrat", sans-serif; }
+  a { color: hsl(192 100% 50%); }
+  a:hover { color: hsl(181 100% 40%); }
+}
+
+@layer components {
+  /* Centered 1200px content column with fixed side gutters (24px, 32px from lg). */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  @media (min-width: 1024px) {
+    .container { padding-left: 32px; padding-right: 32px; }
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #00d4ff, #00c8ca, #00c896);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .gradient-bg { background: linear-gradient(135deg, #00d4ff, #00c8ca, #00c896); }
+
+  .xanh-card { background: hsl(0 0% 100%); border-radius: 0.75rem; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); }
+  .xanh-card-hover { transition: all 0.3s; }
+  .xanh-card-hover:hover { box-shadow: 0 10px 40px rgba(0, 212, 255, 0.15); transform: translateY(-4px); }
+
+  .btn-cta {
+    background: hsl(50 100% 50%);
+    color: hsl(234 66% 30%);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+  }
+  .btn-cta:hover { background: hsl(48 100% 45%); }
+
+  .border-gradient-y { border-image: linear-gradient(180deg, #00d4ff, #00c896) 1; }
+  .no-scrollbar { scrollbar-width: none; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+}
